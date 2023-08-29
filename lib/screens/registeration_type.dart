@@ -1,3 +1,5 @@
+import 'package:e_commerce/constants/routes_names.dart';
+import 'package:e_commerce/widgets/button_widgets.dart';
 import 'package:flutter/material.dart';
 
 class RegisterationTypeScreen extends StatelessWidget {
@@ -34,44 +36,16 @@ class RegisterationTypeScreen extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Container(
-                          width: 320,
-                          height: 50,
-                          margin: const EdgeInsets.only(bottom: 18),
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              elevation: 0,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
-                            ),
-                            child: const Text('Login'),
-                          ),
+                        PrimaryBtn(
+                          text: 'Login',
+                          onPressed: () => Navigator.of(context)
+                              .pushNamed(RoutesNames.login),
                         ),
-                        Container(
-                          width: 320,
-                          height: 50,
-                          margin: const EdgeInsets.only(bottom: 30),
-                          child: OutlinedButton(
-                            onPressed: () {},
-                            style: OutlinedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
-                              side: const BorderSide(
-                                color: Color(0xFFFE5A01),
-                                width: 1,
-                              ),
-                            ),
-                            child: const Text(
-                              'Create an Account',
-                              style: TextStyle(
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                        ),
+                        SecondaryBtn(
+                          onPressed: () => Navigator.of(context)
+                              .pushNamed(RoutesNames.signUp),
+                          text: 'Create an Account',
+                        )
                       ],
                     ),
                   ),
@@ -98,49 +72,3 @@ class RegisterationTypeScreen extends StatelessWidget {
     );
   }
 }
-
-// Center(
-//           child: Column(
-//             mainAxisAlignment: MainAxisAlignment.end,
-//             children: [
-//               Container(
-//                 width: 320,
-//                 height: 50,
-//                 margin: const EdgeInsets.only(bottom: 18),
-//                 child: ElevatedButton(
-//                   onPressed: () {},
-//                   style: ElevatedButton.styleFrom(
-//                     elevation: 0,
-//                     shape: RoundedRectangleBorder(
-//                       borderRadius: BorderRadius.circular(8.0),
-//                     ),
-//                   ),
-//                   child: const Text('Login'),
-//                 ),
-//               ),
-//               Container(
-//                 width: 320,
-//                 height: 50,
-//                 margin: const EdgeInsets.only(bottom: 30),
-//                 child: OutlinedButton(
-//                   onPressed: () {},
-//                   style: OutlinedButton.styleFrom(
-//                     shape: RoundedRectangleBorder(
-//                       borderRadius: BorderRadius.circular(8.0),
-//                     ),
-//                     side: const BorderSide(
-//                       color: Color(0xFFFE5A01),
-//                       width: 1,
-//                     ),
-//                   ),
-//                   child: const Text(
-//                     'Create an Account',
-//                     style: TextStyle(
-//                       color: Colors.black,
-//                     ),
-//                   ),
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
