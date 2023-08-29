@@ -1,3 +1,4 @@
+import 'package:e_commerce/constants/routes_names.dart';
 import 'package:e_commerce/widgets/button_widgets.dart';
 import 'package:e_commerce/widgets/input_fields.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,6 @@ class LoginScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
                 flex: 4,
@@ -52,7 +52,8 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {},
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () => Navigator.of(context)
+                          .pushNamed(RoutesNames.newPassword),
                       child: const Text('Forgot your password?'),
                     ),
                   ],
@@ -75,9 +76,11 @@ class LoginScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text("Don't have an Account? "),
+                          const Text("Don't have an Account?"),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () => Navigator.of(context)
+                                .pushNamedAndRemoveUntil(
+                                    RoutesNames.signUp, (route) => false),
                             child: const Text('Sign Up'),
                           ),
                         ],
