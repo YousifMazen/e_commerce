@@ -28,6 +28,10 @@ class CustomTextFiled extends StatelessWidget {
             decoration: InputDecoration(
               enabledBorder: InputBorder.none,
               hintText: placeholder,
+              hintStyle: const TextStyle(
+                color: Color(0xFFB6B7B7),
+                fontSize: 14,
+              ),
             ),
           ),
         ),

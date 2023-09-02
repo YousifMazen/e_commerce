@@ -1,6 +1,8 @@
 import 'package:e_commerce/constants/routes_names.dart';
+import 'package:e_commerce/constants/values.dart';
 import 'package:e_commerce/widgets/button_widgets.dart';
 import 'package:e_commerce/widgets/input_fields.dart';
+import 'package:e_commerce/widgets/typohraphy.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -26,18 +28,17 @@ class LoginScreen extends StatelessWidget {
                         top: 40,
                         bottom: 15,
                       ),
-                      child: Text(
-                        'Login',
-                        style: TextStyle(
-                          fontSize: 40,
-                        ),
+                      child: TitleFont(
+                        text: 'Login',
                       ),
                     ),
                     const Padding(
                       padding: EdgeInsets.only(
                         bottom: 30,
                       ),
-                      child: Text('Add your details to login'),
+                      child: SubTitleFont(
+                        text: 'Add your details to login',
+                      ),
                     ),
                     const CustomTextFiled(
                       isPassword: false,
@@ -49,9 +50,16 @@ class LoginScreen extends StatelessWidget {
                     ),
                     PrimaryBtn(
                       text: 'Login',
-                      onPressed: () {},
+                      onPressed: () => Navigator.of(context)
+                          .pushNamedAndRemoveUntil(
+                              RoutesNames.home, (route) => false),
                     ),
                     TextButton(
+                      style: const ButtonStyle(
+                        foregroundColor: MaterialStatePropertyAll(
+                          Color(0xFF7C7D7E),
+                        ),
+                      ),
                       onPressed: () => Navigator.of(context)
                           .pushNamed(RoutesNames.newPassword),
                       child: const Text('Forgot your password?'),
@@ -65,23 +73,51 @@ class LoginScreen extends StatelessWidget {
                   flex: 1,
                   child: Column(
                     children: [
-                      const Text('or Login With'),
+                      const SubTitleFont(text: 'or Login With'),
                       const SizedBox(
                         height: 10,
                       ),
-                      PrimaryBtn(
-                        text: 'Login with Google',
-                        onPressed: () {},
+                      Container(
+                        width: 320,
+                        height: 50,
+                        margin: const EdgeInsets.only(bottom: 18),
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            side: const BorderSide(color: Color(0xFFDD4B39)),
+                            elevation: 0,
+                            backgroundColor: const Color(0xFFDD4B39),
+                            shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.circular(Values.inputs_br),
+                            ),
+                          ),
+                          child: const Text(
+                            'Login with Google',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 45,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text("Don't have an Account?"),
+                          const SubTitleFont(text: "Don't have an Account?"),
                           TextButton(
                             onPressed: () => Navigator.of(context)
                                 .pushNamedAndRemoveUntil(
                                     RoutesNames.signUp, (route) => false),
-                            child: const Text('Sign Up'),
+                            child: const Text(
+                              'Sign Up',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
                           ),
                         ],
                       ),

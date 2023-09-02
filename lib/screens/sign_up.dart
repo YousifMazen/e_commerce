@@ -1,6 +1,7 @@
 import 'package:e_commerce/constants/routes_names.dart';
 import 'package:e_commerce/widgets/button_widgets.dart';
 import 'package:e_commerce/widgets/input_fields.dart';
+import 'package:e_commerce/widgets/typohraphy.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -22,18 +23,17 @@ class SignUpScreen extends StatelessWidget {
                         top: 40,
                         bottom: 15,
                       ),
-                      child: Text(
-                        'Sign Up',
-                        style: TextStyle(
-                          fontSize: 40,
-                        ),
+                      child: TitleFont(
+                        text: 'Sign Up',
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(
                         bottom: 30,
                       ),
-                      child: Text('Add your details to sign up'),
+                      child: SubTitleFont(
+                        text: 'Add your details to sign up',
+                      ),
                     ),
                     SizedBox(
                       height: 70,
@@ -53,34 +53,39 @@ class SignUpScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Expanded(
-                  flex: 1,
-                  child: Column(
-                    children: [
-                      PrimaryBtn(
-                        text: 'Sign up',
-                        onPressed: () => Navigator.of(context)
-                            .pushNamed(RoutesNames.newPassword),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text("Already have an Account?"),
-                          TextButton(
-                            onPressed: () => Navigator.of(context)
-                                .pushNamedAndRemoveUntil(
-                                    RoutesNames.login, (route) => false),
-                            child: const Text('Login'),
+              Expanded(
+                flex: 1,
+                child: Column(
+                  children: [
+                    const Spacer(),
+                    PrimaryBtn(
+                      text: 'Sign up',
+                      onPressed: () =>
+                          Navigator.of(context).pushNamed(RoutesNames.otp),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const SubTitleFont(
+                          text: 'Already have an Account?',
+                        ),
+                        TextButton(
+                          onPressed: () => Navigator.of(context)
+                              .pushNamedAndRemoveUntil(
+                                  RoutesNames.login, (route) => false),
+                          child: const Text(
+                            'Login',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                            ),
                           ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                  ],
                 ),
               ),
             ],

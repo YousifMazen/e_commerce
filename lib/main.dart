@@ -12,10 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSwatch().copyWith(
-        primary: const Color(0xFFFE5A01),
-        // secondary: const Color(0xFFFFC107),
-      )),
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: const Color(0xFFFE5A01),
+          // secondary: const Color(0xFFFFC107),
+        ),
+        fontFamily: 'Metropolis',
+      ),
       initialRoute: '/',
       onGenerateRoute: AppRouteGenerator.generateRoute,
     );

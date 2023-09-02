@@ -24,7 +24,13 @@ class PrimaryBtn extends StatelessWidget {
             borderRadius: BorderRadius.circular(Values.inputs_br),
           ),
         ),
-        child: Text(text),
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+          ),
+        ),
       ),
     );
   }
@@ -59,8 +65,10 @@ class SecondaryBtn extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: TextStyle(
-            color: Colors.black,
+          style: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+            color: Color(0xFF4A4B4D),
           ),
         ),
       ),
