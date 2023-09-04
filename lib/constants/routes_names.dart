@@ -7,4 +7,8 @@ class RoutesNames {
   static const String otp = '/ptp';
   static const String location = '/location';
   static const String home = '/home';
+  static const String offers = '/offers';
+  static const String favorite = '/favorite';
+  static const String hollanGo = '/hollan_go';
+  static const String profile = '/profile';
 }
