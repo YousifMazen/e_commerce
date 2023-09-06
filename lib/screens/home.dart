@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
             label: 'Offers',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
+            icon: Icon(Icons.favorite_outline),
             label: 'Favorite',
           ),
           BottomNavigationBarItem(
@@ -39,27 +39,34 @@ class HomeScreen extends StatelessWidget {
         onTap: (int index) {
           switch (index) {
             case 0:
-              // Navigate to the Home screen
               break;
             case 1:
               // Navigate to the Offers screen
               Navigator.of(context).pushNamedAndRemoveUntil(
-                  RoutesNames.offers, (route) => false);
+                RoutesNames.offers,
+                (route) => false,
+              );
               break;
             case 2:
               // Navigate to the Favorite screen
               Navigator.of(context).pushNamedAndRemoveUntil(
-                  RoutesNames.favorite, (route) => false);
+                RoutesNames.favorite,
+                (route) => false,
+              );
               break;
             case 3:
               // Navigate to the Hollan Go screen
               Navigator.of(context).pushNamedAndRemoveUntil(
-                  RoutesNames.hollanGo, (route) => false);
+                RoutesNames.hollanGo,
+                (route) => false,
+              );
               break;
             case 4:
               // Navigate to the Profile screen
               Navigator.of(context).pushNamedAndRemoveUntil(
-                  RoutesNames.profile, (route) => false);
+                RoutesNames.profile,
+                (route) => false,
+              );
               break;
           }
         },
@@ -112,19 +119,6 @@ class HomeScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            // Container(
-                            //   width: 51,
-                            //   margin: const EdgeInsets.only(left: 7),
-                            //   decoration: BoxDecoration(
-                            //     color: const Color(0xFFF2F2F2),
-                            //     borderRadius:
-                            //         BorderRadius.circular(Values.inputs_br),
-                            //   ),
-                            //   child: IconButton(
-                            //     onPressed: () {},
-                            //     icon: const Icon(Icons.shopping_bag_outlined),
-                            //   ),
-                            // ),
                             Stack(
                               children: [
                                 Container(
@@ -220,7 +214,11 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () =>
+                          Navigator.of(context).pushNamedAndRemoveUntil(
+                        RoutesNames.offers,
+                        (route) => false,
+                      ),
                       child: const Text(
                         'See all >',
                         style: TextStyle(

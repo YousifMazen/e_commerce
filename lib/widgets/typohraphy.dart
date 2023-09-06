@@ -1,4 +1,3 @@
-import 'package:e_commerce/constants/values.dart';
 import 'package:flutter/material.dart';
 
 class TitleFont extends StatelessWidget {
