@@ -1,8 +1,14 @@
 import 'package:e_commerce/constants/routes_names.dart';
 import 'package:flutter/material.dart';
 
-class OffersScreen extends StatelessWidget {
-  OffersScreen({super.key});
+class OffersScreen extends StatefulWidget {
+  const OffersScreen({super.key});
+
+  @override
+  State<OffersScreen> createState() => _OffersScreenState();
+}
+
+class _OffersScreenState extends State<OffersScreen> {
   final List<Map<String, dynamic>> items = [
     {
       "name": "Lorem Ipsum",
@@ -71,6 +77,8 @@ class OffersScreen extends StatelessWidget {
       "discount": "-15%",
     },
   ];
+
+  int selectedOffer = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -192,6 +200,7 @@ class OffersScreen extends StatelessWidget {
                           height: 1.4,
                         ),
                       ),
+                      // Hidden text
                       const Text(
                         'Offers',
                         textAlign: TextAlign.center,
@@ -225,8 +234,15 @@ class OffersScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(right: 8),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  selectedOffer = 1;
+                                });
+                              },
                               style: OutlinedButton.styleFrom(
+                                backgroundColor: (selectedOffer == 1)
+                                    ? const Color(0xFFFE5A01)
+                                    : Colors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15),
                                 ),
@@ -235,12 +251,14 @@ class OffersScreen extends StatelessWidget {
                                   width: 0.3,
                                 ),
                               ),
-                              child: const Text(
+                              child: Text(
                                 'Free Delivery',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
-                                  color: Color(0xFF4A4B4D),
+                                  color: (selectedOffer == 1)
+                                      ? Colors.white
+                                      : const Color(0xFF4A4B4D),
                                 ),
                               ),
                             ),
@@ -248,8 +266,15 @@ class OffersScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(right: 8),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  selectedOffer = 2;
+                                });
+                              },
                               style: OutlinedButton.styleFrom(
+                                backgroundColor: (selectedOffer == 2)
+                                    ? const Color(0xFFFE5A01)
+                                    : Colors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15),
                                 ),
@@ -258,12 +283,14 @@ class OffersScreen extends StatelessWidget {
                                   width: 0.3,
                                 ),
                               ),
-                              child: const Text(
+                              child: Text(
                                 'Bundles',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
-                                  color: Color(0xFF4A4B4D),
+                                  color: (selectedOffer == 2)
+                                      ? Colors.white
+                                      : const Color(0xFF4A4B4D),
                                 ),
                               ),
                             ),
@@ -271,8 +298,15 @@ class OffersScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(right: 8),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  selectedOffer = 3;
+                                });
+                              },
                               style: OutlinedButton.styleFrom(
+                                backgroundColor: (selectedOffer == 3)
+                                    ? const Color(0xFFFE5A01)
+                                    : Colors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15),
                                 ),
@@ -281,12 +315,14 @@ class OffersScreen extends StatelessWidget {
                                   width: 0.3,
                                 ),
                               ),
-                              child: const Text(
+                              child: Text(
                                 '10-20%',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
-                                  color: Color(0xFF4A4B4D),
+                                  color: (selectedOffer == 3)
+                                      ? Colors.white
+                                      : const Color(0xFF4A4B4D),
                                 ),
                               ),
                             ),
@@ -294,8 +330,15 @@ class OffersScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(right: 8),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  selectedOffer = 4;
+                                });
+                              },
                               style: OutlinedButton.styleFrom(
+                                backgroundColor: (selectedOffer == 4)
+                                    ? const Color(0xFFFE5A01)
+                                    : Colors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15),
                                 ),
@@ -304,12 +347,14 @@ class OffersScreen extends StatelessWidget {
                                   width: 0.3,
                                 ),
                               ),
-                              child: const Text(
+                              child: Text(
                                 '30-40%',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
-                                  color: Color(0xFF4A4B4D),
+                                  color: (selectedOffer == 4)
+                                      ? Colors.white
+                                      : const Color(0xFF4A4B4D),
                                 ),
                               ),
                             ),
@@ -317,8 +362,15 @@ class OffersScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(right: 8),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  selectedOffer = 5;
+                                });
+                              },
                               style: OutlinedButton.styleFrom(
+                                backgroundColor: (selectedOffer == 5)
+                                    ? const Color(0xFFFE5A01)
+                                    : Colors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15),
                                 ),
@@ -327,12 +379,14 @@ class OffersScreen extends StatelessWidget {
                                   width: 0.3,
                                 ),
                               ),
-                              child: const Text(
+                              child: Text(
                                 '50-60%',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
-                                  color: Color(0xFF4A4B4D),
+                                  color: (selectedOffer == 5)
+                                      ? Colors.white
+                                      : const Color(0xFF4A4B4D),
                                 ),
                               ),
                             ),
@@ -343,122 +397,239 @@ class OffersScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                child: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: GridView.builder(
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: items.length,
-                    shrinkWrap: true,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3,
-                      mainAxisSpacing: 12,
-                      mainAxisExtent: 200,
-                    ),
-                    itemBuilder: (context, index) {
-                      return Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(14),
-                        ),
-                        margin: const EdgeInsets.symmetric(horizontal: 6),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Center(
-                              child: Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Container(
-                                  width: double.infinity,
-                                  height: 97,
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xFFF7EAE7),
-                                    borderRadius: BorderRadius.circular(14),
-                                  ),
-                                  child: Image.asset(
-                                    'assets/organic-broccoli.png',
-                                    fit: BoxFit.contain,
+              Visibility(
+                visible: selectedOffer == 1,
+                child: SizedBox(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: GridView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: items.length,
+                      shrinkWrap: true,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                        mainAxisSpacing: 12,
+                        mainAxisExtent: 200,
+                      ),
+                      itemBuilder: (context, index) {
+                        return Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                          margin: const EdgeInsets.symmetric(horizontal: 6),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 97,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFF7EAE7),
+                                      borderRadius: BorderRadius.circular(14),
+                                    ),
+                                    child: Image.asset(
+                                      'assets/organic-broccoli.png',
+                                      fit: BoxFit.contain,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 10, bottom: 4),
-                                    child: Text(
-                                      "${items.elementAt(index)['discount']}",
-                                      style: const TextStyle(
-                                        color: Color(0xFF28AE61),
-                                        fontSize: 10,
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 6),
-                                    child: Text(
-                                      "${items.elementAt(index)['name']}",
-                                      style: const TextStyle(
-                                        color: Color(0xFF392F2D),
-                                        fontSize: 12,
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 10),
-                                    child: Text(
-                                      "${items.elementAt(index)['weight']}",
-                                      style: const TextStyle(
-                                        color: Color(0xFF999594),
-                                        fontSize: 10,
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 15),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          "${items.elementAt(index)['price']}",
-                                          style: const TextStyle(
-                                            color: Color(0xFFFB7552),
-                                            fontSize: 13,
-                                          ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 10, bottom: 4),
+                                      child: Text(
+                                        "${items.elementAt(index)['discount']}",
+                                        style: const TextStyle(
+                                          color: Color(0xFF28AE61),
+                                          fontSize: 10,
                                         ),
-                                        Row(
-                                          children: const [
-                                            Text(
-                                              '4.9',
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(bottom: 6),
+                                      child: Text(
+                                        "${items.elementAt(index)['name']}",
+                                        style: const TextStyle(
+                                          color: Color(0xFF392F2D),
+                                          fontSize: 12,
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 10),
+                                      child: Text(
+                                        "${items.elementAt(index)['weight']}",
+                                        style: const TextStyle(
+                                          color: Color(0xFF999594),
+                                          fontSize: 10,
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 15),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "${items.elementAt(index)['price']}",
+                                            style: const TextStyle(
+                                              color: Color(0xFFFB7552),
+                                              fontSize: 13,
+                                            ),
+                                          ),
+                                          Row(
+                                            children: const [
+                                              Text(
+                                                '4.9',
+                                                style: TextStyle(
+                                                  color: Color(0xFFE2D7D4),
+                                                  fontSize: 12,
+                                                ),
+                                              ),
+                                              Icon(
+                                                Icons.star,
+                                                color: Color(0xFFFFA60F),
+                                                size: 15,
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ),
+              Visibility(
+                visible: selectedOffer == 2,
+                child: SizedBox(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: GridView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: items.length,
+                      shrinkWrap: true,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 1,
+                        mainAxisSpacing: 12,
+                        mainAxisExtent: 180,
+                      ),
+                      itemBuilder: (context, index) {
+                        return Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                          margin: const EdgeInsets.symmetric(horizontal: 6),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 120,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFF7EAE7),
+                                      borderRadius: BorderRadius.circular(14),
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: const BorderRadius.only(
+                                        topLeft: Radius.circular(12),
+                                        topRight: Radius.circular(12),
+                                      ),
+                                      child: Image.asset(
+                                        'assets/bundle.png',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                        top: 10,
+                                      ),
+                                      child: Text(
+                                        "${items.elementAt(index)['name']}",
+                                        style: const TextStyle(
+                                          color: Color(0xFF392F2D),
+                                          fontSize: 12,
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 4),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          GestureDetector(
+                                            onTap: () {},
+                                            child: const Text(
+                                              'Bundle details >',
                                               style: TextStyle(
-                                                color: Color(0xFFE2D7D4),
-                                                fontSize: 12,
+                                                color: Color(0xFFFB7552),
+                                                fontSize: 13,
                                               ),
                                             ),
-                                            Icon(
-                                              Icons.star,
-                                              color: Color(0xFFFFA60F),
-                                              size: 15,
-                                            ),
-                                          ],
-                                        )
-                                      ],
+                                          ),
+                                          Row(
+                                            children: const [
+                                              Text(
+                                                '4.9',
+                                                style: TextStyle(
+                                                  color: Color(0xFFE2D7D4),
+                                                  fontSize: 12,
+                                                ),
+                                              ),
+                                              Icon(
+                                                Icons.star,
+                                                color: Color(0xFFFFA60F),
+                                                size: 15,
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
+                            ],
+                          ),
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
