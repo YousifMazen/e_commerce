@@ -42,9 +42,8 @@ class HomeScreen extends StatelessWidget {
               break;
             case 1:
               // Navigate to the Offers screen
-              Navigator.of(context).pushNamedAndRemoveUntil(
+              Navigator.of(context).pushNamed(
                 RoutesNames.offers,
-                (route) => false,
               );
               break;
             case 2:
@@ -130,7 +129,8 @@ class HomeScreen extends StatelessWidget {
                                         BorderRadius.circular(Values.inputs_br),
                                   ),
                                   child: IconButton(
-                                    onPressed: () {},
+                                    onPressed: () => Navigator.of(context)
+                                        .pushNamed(RoutesNames.cart),
                                     icon: const Icon(
                                       Icons.shopping_bag_outlined,
                                       size: 30,
@@ -214,10 +214,8 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () =>
-                          Navigator.of(context).pushNamedAndRemoveUntil(
+                      onPressed: () => Navigator.of(context).pushNamed(
                         RoutesNames.offers,
-                        (route) => false,
                       ),
                       child: const Text(
                         'See all >',
@@ -535,7 +533,6 @@ class HomeScreen extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(14),
                                       ),
                                       child: Image.asset(
-                                        // here
                                         'assets/idk.png',
                                         fit: BoxFit.contain,
                                       ),

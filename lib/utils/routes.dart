@@ -1,4 +1,5 @@
 import 'package:e_commerce/constants/routes_names.dart';
+import 'package:e_commerce/screens/cart.dart';
 import 'package:e_commerce/screens/home.dart';
 import 'package:e_commerce/screens/intro.dart';
 import 'package:e_commerce/screens/location.dart';
@@ -31,7 +32,9 @@ class AppRouteGenerator {
       case RoutesNames.home:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
       case RoutesNames.offers:
-        return MaterialPageRoute(builder: (_) => OffersScreen());
+        return MaterialPageRoute(builder: (_) => const OffersScreen());
+      case RoutesNames.cart:
+        return MaterialPageRoute(builder: (_) => const CartScreen());
       default:
         // Open this page if wrong route address used
         return MaterialPageRoute(

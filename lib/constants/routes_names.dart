@@ -11,4 +11,5 @@ class RoutesNames {
   static const String favorite = '/favorite';
   static const String hollanGo = '/hollan_go';
   static const String profile = '/profile';
+  static const String cart = '/cart';
 }
