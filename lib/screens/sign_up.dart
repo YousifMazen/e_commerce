@@ -14,10 +14,10 @@ class SignUpScreen extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              Expanded(
+              const Expanded(
                 flex: 4,
                 child: Column(
-                  children: const [
+                  children: [
                     Padding(
                       padding: EdgeInsets.only(
                         top: 40,

@@ -155,7 +155,7 @@ class _OffersScreenState extends State<OffersScreen> {
                   Stack(
                     alignment: AlignmentDirectional.center,
                     children: [
-                      Container(
+                      SizedBox(
                         width: double.infinity,
                         height: 375,
                         child: Image.asset(
@@ -491,8 +491,8 @@ class _OffersScreenState extends State<OffersScreen> {
                                               fontSize: 13,
                                             ),
                                           ),
-                                          Row(
-                                            children: const [
+                                          const Row(
+                                            children: [
                                               Text(
                                                 '4.9',
                                                 style: TextStyle(
@@ -603,8 +603,8 @@ class _OffersScreenState extends State<OffersScreen> {
                                               ),
                                             ),
                                           ),
-                                          Row(
-                                            children: const [
+                                          const Row(
+                                            children: [
                                               Text(
                                                 '4.9',
                                                 style: TextStyle(

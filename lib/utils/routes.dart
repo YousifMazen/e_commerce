@@ -3,9 +3,11 @@ import 'package:e_commerce/screens/cart.dart';
 import 'package:e_commerce/screens/home.dart';
 import 'package:e_commerce/screens/intro.dart';
 import 'package:e_commerce/screens/location.dart';
+import 'package:e_commerce/screens/location_detect.dart';
 import 'package:e_commerce/screens/login.dart';
 import 'package:e_commerce/screens/new_password.dart';
 import 'package:e_commerce/screens/offers.dart';
+import 'package:e_commerce/screens/order_status.dart';
 import 'package:e_commerce/screens/otp.dart';
 import 'package:e_commerce/screens/registeration_type.dart';
 import 'package:e_commerce/screens/sign_up.dart';
@@ -35,6 +37,10 @@ class AppRouteGenerator {
         return MaterialPageRoute(builder: (_) => const OffersScreen());
       case RoutesNames.cart:
         return MaterialPageRoute(builder: (_) => const CartScreen());
+      case RoutesNames.locationDetect:
+        return MaterialPageRoute(builder: (_) => const LocationDetectScreen());
+      case RoutesNames.orderStatus:
+        return MaterialPageRoute(builder: (_) => const OrderStatusScreen());
       default:
         // Open this page if wrong route address used
         return MaterialPageRoute(

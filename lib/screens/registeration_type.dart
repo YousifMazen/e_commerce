@@ -28,7 +28,7 @@ class RegisterationTypeScreen extends StatelessWidget {
                       2,
                   width: double.infinity,
                 ),
-                Container(
+                SizedBox(
                   height: (MediaQuery.of(context).size.height -
                           MediaQuery.of(context).padding.top) /
                       2,

@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                   Stack(
                     alignment: AlignmentDirectional.center,
                     children: [
-                      Container(
+                      SizedBox(
                         width: double.infinity,
                         height: 244,
                         child: Image.asset('assets/home_header.png',
@@ -166,13 +166,13 @@ class HomeScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 23,
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 75),
+                          padding: EdgeInsets.only(top: 75),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               Text(
                                 'Holland Bazar',
                                 style: TextStyle(
@@ -465,9 +465,9 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Frequently Ordered',
                           style: TextStyle(
@@ -539,14 +539,14 @@ class HomeScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(
                                       horizontal: 10),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      const Padding(
+                                      Padding(
                                         padding:
                                             EdgeInsets.only(top: 10, bottom: 4),
                                         child: Text(
@@ -557,7 +557,7 @@ class HomeScreen extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      const Padding(
+                                      Padding(
                                         padding: EdgeInsets.only(bottom: 6),
                                         child: Text(
                                           'Lorem Ipsum',
@@ -567,7 +567,7 @@ class HomeScreen extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      const Padding(
+                                      Padding(
                                         padding: EdgeInsets.only(bottom: 10),
                                         child: Text(
                                           '400 g',
@@ -579,12 +579,12 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                       Padding(
                                         padding:
-                                            const EdgeInsets.only(bottom: 15),
+                                            EdgeInsets.only(bottom: 15),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
                                           children: [
-                                            const Text(
+                                            Text(
                                               '\$ 4.75',
                                               style: TextStyle(
                                                 color: Color(0xFFFB7552),
@@ -592,7 +592,7 @@ class HomeScreen extends StatelessWidget {
                                               ),
                                             ),
                                             Row(
-                                              children: const [
+                                              children: [
                                                 Text(
                                                   '4.9',
                                                   style: TextStyle(
@@ -643,14 +643,14 @@ class HomeScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(
                                       horizontal: 10),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      const Padding(
+                                      Padding(
                                         padding:
                                             EdgeInsets.only(top: 10, bottom: 4),
                                         child: Text(
@@ -661,7 +661,7 @@ class HomeScreen extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      const Padding(
+                                      Padding(
                                         padding: EdgeInsets.only(bottom: 6),
                                         child: Text(
                                           'Lorem Ipsum',
@@ -671,7 +671,7 @@ class HomeScreen extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      const Padding(
+                                      Padding(
                                         padding: EdgeInsets.only(bottom: 10),
                                         child: Text(
                                           '400 g',
@@ -683,12 +683,12 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                       Padding(
                                         padding:
-                                            const EdgeInsets.only(bottom: 15),
+                                            EdgeInsets.only(bottom: 15),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
                                           children: [
-                                            const Text(
+                                            Text(
                                               '\$ 4.75',
                                               style: TextStyle(
                                                 color: Color(0xFFFB7552),
@@ -696,7 +696,7 @@ class HomeScreen extends StatelessWidget {
                                               ),
                                             ),
                                             Row(
-                                              children: const [
+                                              children: [
                                                 Text(
                                                   '4.9',
                                                   style: TextStyle(
@@ -747,14 +747,14 @@ class HomeScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(
                                       horizontal: 10),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      const Padding(
+                                      Padding(
                                         padding:
                                             EdgeInsets.only(top: 10, bottom: 4),
                                         child: Text(
@@ -765,7 +765,7 @@ class HomeScreen extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      const Padding(
+                                      Padding(
                                         padding: EdgeInsets.only(bottom: 6),
                                         child: Text(
                                           'Lorem Ipsum',
@@ -775,7 +775,7 @@ class HomeScreen extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      const Padding(
+                                      Padding(
                                         padding: EdgeInsets.only(bottom: 10),
                                         child: Text(
                                           '400 g',
@@ -787,12 +787,12 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                       Padding(
                                         padding:
-                                            const EdgeInsets.only(bottom: 15),
+                                            EdgeInsets.only(bottom: 15),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
                                           children: [
-                                            const Text(
+                                            Text(
                                               '\$ 4.75',
                                               style: TextStyle(
                                                 color: Color(0xFFFB7552),
@@ -800,7 +800,7 @@ class HomeScreen extends StatelessWidget {
                                               ),
                                             ),
                                             Row(
-                                              children: const [
+                                              children: [
                                                 Text(
                                                   '4.9',
                                                   style: TextStyle(

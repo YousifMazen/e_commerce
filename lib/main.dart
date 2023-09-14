@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       onGenerateRoute: AppRouteGenerator.generateRoute,
+      // home: const TestScreen(),
     );
   }
 }

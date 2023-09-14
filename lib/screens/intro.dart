@@ -13,7 +13,7 @@ class IntroScreen extends StatefulWidget {
 
 class _IntroScreenState extends State<IntroScreen> {
   // To track the current page
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
 
   bool isLastPage = false;
   @override
@@ -38,7 +38,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     padding: const EdgeInsets.only(
                       top: 100,
                     ),
-                    child: Container(
+                    child: SizedBox(
                       height: 370,
                       child: Image.asset(
                         'assets/intro1.png',
@@ -71,7 +71,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     padding: const EdgeInsets.only(
                       top: 100,
                     ),
-                    child: Container(
+                    child: SizedBox(
                       height: 370,
                       child: Image.asset(
                         'assets/intro2.png',
@@ -104,7 +104,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     padding: const EdgeInsets.only(
                       top: 100,
                     ),
-                    child: Container(
+                    child: SizedBox(
                       height: 370,
                       child: Image.asset(
                         'assets/intro3.png',

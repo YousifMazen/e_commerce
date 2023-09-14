@@ -12,4 +12,6 @@ class RoutesNames {
   static const String hollanGo = '/hollan_go';
   static const String profile = '/profile';
   static const String cart = '/cart';
+  static const String locationDetect = '/location_detect';
+  static const String orderStatus = '/order_status';
 }
