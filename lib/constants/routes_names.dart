@@ -14,4 +14,5 @@ class RoutesNames {
   static const String cart = '/cart';
   static const String locationDetect = '/location_detect';
   static const String orderStatus = '/order_status';
+  static const String feedback = '/feedback';
 }

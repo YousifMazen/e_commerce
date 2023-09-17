@@ -1,5 +1,6 @@
 import 'package:e_commerce/constants/routes_names.dart';
 import 'package:e_commerce/screens/cart.dart';
+import 'package:e_commerce/screens/feedback.dart';
 import 'package:e_commerce/screens/home.dart';
 import 'package:e_commerce/screens/intro.dart';
 import 'package:e_commerce/screens/location.dart';
@@ -41,6 +42,8 @@ class AppRouteGenerator {
         return MaterialPageRoute(builder: (_) => const LocationDetectScreen());
       case RoutesNames.orderStatus:
         return MaterialPageRoute(builder: (_) => const OrderStatusScreen());
+      case RoutesNames.feedback:
+        return MaterialPageRoute(builder: (_) => const FeedbackScreen());
       default:
         // Open this page if wrong route address used
         return MaterialPageRoute(

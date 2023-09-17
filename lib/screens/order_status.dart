@@ -1,3 +1,4 @@
+import 'package:e_commerce/constants/routes_names.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:location_picker_flutter_map/location_picker_flutter_map.dart';
 import 'package:flutter/material.dart';
@@ -175,7 +176,8 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                     thickness: 1.5,
                   ),
                   OutlinedButton(
-                    onPressed: () {},
+                    onPressed: () =>
+                        Navigator.of(context).pushNamed(RoutesNames.feedback),
                     style: OutlinedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(7),
