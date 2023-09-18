@@ -14,13 +14,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch().copyWith(
           primary: const Color(0xFFFE5A01),
-          // secondary: const Color(0xFFFFC107),
         ),
         fontFamily: 'Metropolis',
       ),
       initialRoute: '/',
       onGenerateRoute: AppRouteGenerator.generateRoute,
-      // home: const TestScreen(),
     );
   }
 }

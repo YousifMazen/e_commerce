@@ -48,7 +48,7 @@ class LocationDetectScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 320,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

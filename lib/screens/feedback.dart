@@ -1,5 +1,4 @@
 import 'package:e_commerce/constants/values.dart';
-import 'package:e_commerce/widgets/button_widgets.dart';
 import 'package:e_commerce/widgets/qualites.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';

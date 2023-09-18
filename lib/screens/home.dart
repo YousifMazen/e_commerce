@@ -228,50 +228,18 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               // Offers list
-              Align(
+              const Align(
                 alignment: AlignmentDirectional.centerStart,
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 11),
+                    padding: EdgeInsets.only(left: 11),
                     child: Row(
                       children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFFE5A01),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          margin: const EdgeInsets.symmetric(horizontal: 6),
-                          width: 195,
-                          height: 195,
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFFE5A01),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          margin: const EdgeInsets.symmetric(horizontal: 6),
-                          width: 195,
-                          height: 195,
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFFE5A01),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          margin: const EdgeInsets.symmetric(horizontal: 6),
-                          width: 195,
-                          height: 195,
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFFE5A01),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          margin: const EdgeInsets.symmetric(horizontal: 6),
-                          width: 195,
-                          height: 195,
-                        ),
+                        OfferWidget(),
+                        OfferWidget(),
+                        OfferWidget(),
+                        OfferWidget(),
                       ],
                     ),
                   ),
@@ -540,8 +508,7 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 const Padding(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 10),
+                                  padding: EdgeInsets.symmetric(horizontal: 10),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -578,8 +545,7 @@ class HomeScreen extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                        padding:
-                                            EdgeInsets.only(bottom: 15),
+                                        padding: EdgeInsets.only(bottom: 15),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
@@ -644,8 +610,7 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 const Padding(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 10),
+                                  padding: EdgeInsets.symmetric(horizontal: 10),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -682,8 +647,7 @@ class HomeScreen extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                        padding:
-                                            EdgeInsets.only(bottom: 15),
+                                        padding: EdgeInsets.only(bottom: 15),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
@@ -748,8 +712,7 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 const Padding(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 10),
+                                  padding: EdgeInsets.symmetric(horizontal: 10),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -786,8 +749,7 @@ class HomeScreen extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                        padding:
-                                            EdgeInsets.only(bottom: 15),
+                                        padding: EdgeInsets.only(bottom: 15),
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
@@ -833,6 +795,25 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class OfferWidget extends StatelessWidget {
+  const OfferWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: const Color(0xFFFE5A01),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      margin: const EdgeInsets.symmetric(horizontal: 6),
+      width: 195,
+      height: 195,
     );
   }
 }
